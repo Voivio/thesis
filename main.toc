@@ -1,0 +1,33 @@
+\contentsline {chapter}{中文内容摘要}{2}{chapter*.7}% 
+\contentsline {chapter}{英文内容摘要}{3}{chapter*.8}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}简介}{4}{chapter.1}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}背景介绍}{6}{chapter.2}% 
+\contentsline {section}{\numberline {第一节}环境反向散射通讯}{6}{section.2.1}% 
+\contentsline {section}{\numberline {第二节}里德-所罗门码与突发错误}{7}{section.2.2}% 
+\contentsline {section}{\numberline {第三节}低密度奇偶校验码}{7}{section.2.3}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}对Wi-Fi流量的建模}{9}{chapter.3}% 
+\contentsline {section}{\numberline {第一节}Wi-Fi流量的有-无状态变化}{9}{section.3.1}% 
+\contentsline {subsection}{\numberline {一}短时变化：CSMA/CA协议}{9}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {二}长时变化：环境与人类活动}{10}{subsection.3.1.2}% 
+\contentsline {section}{\numberline {第二节}统计建模}{11}{section.3.2}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}基于模型的优化}{13}{chapter.4}% 
+\contentsline {section}{\numberline {第一节}流量预测}{13}{section.4.1}% 
+\contentsline {subsection}{\numberline {一}离散时间情况}{13}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {二}预测对LDPC解码的影响}{14}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {第二节}根据预测优化}{15}{section.4.2}% 
+\contentsline {subsection}{\numberline {一}置换}{15}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {二}动态参数调节}{15}{subsection.4.2.2}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}评估}{16}{chapter.5}% 
+\contentsline {section}{\numberline {第一节}使用模型进行的预测}{16}{section.5.1}% 
+\contentsline {section}{\numberline {第二节}使用模型进行的优化}{18}{section.5.2}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}相关工作}{21}{chapter.6}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}总结}{22}{chapter.7}% 
+\contentsline {chapter}{参考文献}{23}{chapter*.20}% 
+\contentsfinish 

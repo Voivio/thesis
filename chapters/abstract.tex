@@ -1,0 +1,49 @@
+% !TeX root = ../main.tex
+
+\ustcsetup{
+  keywords = {
+    物联网技术, 反向散射通讯, Wi-Fi流量建模, 马尔可夫模型, 里德-所罗门码, 低密度奇偶校验码
+  },
+  keywords* = {
+    Internet of Things, WiFi Backscatter,
+    Wi-Fi Traffic Modelling, Markov Model, Reed-Solomon Code, Low Density Parity Check Code
+  },
+}
+
+\begin{abstract}
+%  摘要是论文内容的总结概括，应简要说明论文的研究目的、基本研究内容、 研究方法或
+%  过程、结果和结论，突出论文的创新之处。摘要中不宜使用公式、图表，不引用文献。
+%  博士论文中文摘要一般800～1000个汉字，硕士论文中文摘要一般600个汉字。英文摘要的
+%  篇幅参照中文摘要。
+%
+%  关键词另起一行并隔写在摘要下方，一般3～8个词，中文关键词间空一字或用分号“；”隔
+%  开。英文摘要的关键词与中文摘要的关键词应完全一致，中间用逗号“,”或分号“;”隔开。
+  随着物联网技术的发展，利用环境中已有射频信号进行获能和通讯的环境反向散射通讯技术
+  受到了越来越多的关注。由于Wi-Fi设备的广泛存在，许多工作使用环境中的W-Fi信号进行通讯，
+  实现了可靠和高效的通讯系统。但绝大多数的工作都对发送数据的节点进行了控制，因此在实际
+  环境中面对时有时无的数据流量表现性能会下降；另一方面，不控制节点的工作尽管在一定程度
+  上解决了流量不受控的问题，但
+  没有
+  对信道建模以实现更好的表现。
+  
+	本工作提出了一个全新的受马尔科夫链控制的信道模型，基于该模型，本工作利用了蒙特卡罗方法进行了有无状态概率预测，并进一步提升了系统的可靠性和高效性。同时对低密度奇偶校验码和里德-所罗门码两种编码进行了评估和比较。结果表明，该模型在实验室环境下最高可实现平均98.6\%的预测击中率，LDPC编码最高将有效吞吐率提升了11kbps，动态码率调节在XX环境下将有效吞吐量提升了XX\%。
+\end{abstract}
+
+\begin{enabstract}
+%  This is a sample document of USTC thesis \LaTeX{} template for bachelor,
+%  master and doctor. The template is created by zepinglee and seisman, which
+%  orignate from the template created by ywg. The template meets the
+%  equirements of USTC theiss writing standards.
+%
+%  This document will show the usage of basic commands provided by \LaTeX{} and
+%  some features provided by the template. For more information, please refer to
+%  the template document ustcthesis.pdf.
+As the development of Internet of Things technology, ambient backscattering is gathering more and
+more attention due to its ability to harvest energy and communicate over pre-existing RF signals.
+Many backscattering systems have achieved both high reliability and efficiency using Wi-Fi signals due to 
+their ubiquity. However, most works exert control over Wi-Fi APs to some extent, which may lead to performance 
+degradation considering the labile nature of real-life Wi-Fi traffic. Works who not control APs solve such lability can 
+reach better performance with precise channel modelling.
+
+In this work, a new Markov chain modulated channel model is proposed. Based on this model, Wi-Fi traffic can be predicted using Monte Carlo method. LDPC code and RS code are compared under various environments. The evaluation shows the model achieves a best mean hit rate of 98.6\% under lab environment. LDPC code improves the goodput by 11kbps and dynamic code rate by XX\% under XX environment.
+\end{enabstract}
