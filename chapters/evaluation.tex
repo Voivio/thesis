@@ -147,21 +147,36 @@
 
 \begin{figure}[t]
 	\begin{minipage}[b]{.32\linewidth}
-		\includegraphics[width = \linewidth]{placeholder}
-		\subcaption{实验室环境。}\label{fig:coderate_lab}
+		\includegraphics[width = \linewidth]{eval_figure5_optCodeRate_256_200_mall_8-cropped}
+		\subcaption{商场环境，256比特，200kbps。}\label{fig:coderate_256_200_mall}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{.32\linewidth}
+		\includegraphics[width = \linewidth]{eval_figure5_optCodeRate_256_500_mall_8-cropped}
+		\subcaption{商场环境，256比特，500kbps。}\label{fig:coderate_256_500_mall}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{.32\linewidth}
+		\includegraphics[width = \linewidth]{eval_figure5_optCodeRate_128_500_mall_8-cropped}
+		\subcaption{商场环境，128比特，500kbps。}\label{fig:coderate_128_500_mall}
+	\end{minipage}
+
+	\begin{minipage}[b]{.32\linewidth}
+		\includegraphics[width = \linewidth]{eval_figure5_optCodeRate_512_500_mall_8-cropped}
+		\subcaption{商场环境，512比特，500kbps。}\label{fig:coderate_512_500_mall}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{.32\linewidth}
 		\includegraphics[width = \linewidth]{placeholder}
-		\subcaption{商场环境。}\label{fig:coderate_mall}
+		\subcaption{实验室环境，256比特，500kbps。}\label{fig:coderate_256_200_lab}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{.32\linewidth}
 		\includegraphics[width = \linewidth]{placeholder}
-		\subcaption{家庭环境。}\label{fig:coderate_home}
+		\subcaption{家庭环境，256比特，500kbps。}\label{fig:coderate_256_200_home}
 	\end{minipage}
 	\caption{不同环境下动态调节码率对实际吞吐量的影响。}\label{fig:coderate}
 \end{figure}
-\textbf{对RS码的动态参数调节}
-图\ref{fig:coderate}展示了在以500kbps速率传输256比特时，利用模型的预测结果进行码率调节的效果。横坐标表示不同的时间段，纵坐标时实际吞吐量。
+\textbf{对RS码的动态参数调节}。
+图\ref{fig:coderate}展示了在不同环境、速率和帧长下，利用模型的预测结果对里德-所罗门码码率调节的效果。这里采用的时$(31, k)$的里德-所罗门码。横坐标表示不同的时间段，纵坐标时实际吞吐量。在商场环境下，不同帧长和速率会有不同的ON/OFF统计特征，这也表现在图中$k$值从上到下的顺序会发生改变。图\ref{fig:coderate_256_200_mall}-\ref{fig:coderate_128_500_mall}中，在$k = 15$都达到了最高的有效吞吐量，在错误恢复和传输信息之间取得了平衡。从结果来看，预测的效果能够以平均65\%的概率击中最好的两个码率；在没有选择最佳两个码率的情况下，多数选择了高码率的情况。这可能来源于对长度的平衡不够合理。总体来看，在商场环境下预测优化的码率能够达到最佳码率的80.79\%，最好的情况下达到88.25\%。
 

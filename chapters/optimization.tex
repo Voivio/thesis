@@ -97,11 +97,11 @@ L(c_i)=\log\left(\frac{ p_i \frac{1}{1+ratio_i} + \frac{1}{2} (1-p_i) }{ p_i \fr
 %一般来说，在帧长一定的情况下，选择越高的传输率由越高的机会在ON状态下发送完数据；在传输率一定的情况下，选择越长的帧长会有更高的可能性再发送的过程中遇见OFF状态，但是会有更高的吞吐量。同样，对环境的预测也会影响码率的选择：如果预测环境中Wi-Fi流量比较繁忙，那么可以提升码率，以达到更高的吞吐量；如果预测环境中会出现较多的OFF状态，会选择降低码率，已保证该帧可以正确传输。
 具体来讲，假设当前使用的编码在每一块中可以纠正$t$比特错误，在最理想的情况下，结合置换一共可以纠正$bt$比特的错误。将最有可能出现OFF状态的$bt$比特利用码进行纠正，剩下所有比特位置全部为ON状态的概率可以由下式计算：
 \begin{equation}
-p_{success} = \prod_{i = bt+1}^{L} p_i^{'},
+p_{success} = \frac{\prod_{i = bt+1}^{L} p_i^{'}}{n^\alpha},
 \end{equation}
-其中$p_i^{'}$是对原有预测升序排列后的概率。为了平衡长度的因素，实际中$p_{success}$选择的是所有需计算的概率的集合均值$p_{success, GM}$。进一步，在给定帧长、传输率和码率的选择范围下，我们求解下式的最优化问题：
+其中$p_i^{'}$是对原有预测升序排列后的概率，$\alpha$时用来平衡长度影响的参数，考虑到越长的预测会出现错误预测的概率越大。在实际的计算中采用2.5。进一步，在给定帧长、传输率和码率的选择范围下，我们求解下式的最优化问题：
 \begin{equation}
 \label{equ:dynamic_parameter}
-fLen^\ast, dr^\ast, cr^\ast = \max_{fLen, dr, cr} \frac{p_{success, GM}\cdot cr}{fLen\cdot dr},
+fLen^\ast, dr^\ast, cr^\ast = \max_{fLen, dr, cr} \frac{dr}{fLen}\cdot fLen\cdot cr \cdot p_{success},
 \end{equation}
-其中$fLen,dr,cr$依次指帧长、传输率和码率。本质上，式\ref{equ:dynamic_parameter}是在求解单位时间内可以正确传输的比特数。由于$p_{success}p_{success, GM}$一般会很小，因此采用对数形式的式\ref{equ:dynamic_parameter}。
+其中$fLen,dr,cr$依次指帧长、传输率和码率。本质上，式\ref{equ:dynamic_parameter}是在求解单位时间内可以正确传输的比特数。由于$p_{success}$一般会很小，因此采用对数形式的式\ref{equ:dynamic_parameter}。
