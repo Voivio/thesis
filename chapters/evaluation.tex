@@ -24,9 +24,9 @@
 	\caption{整数分解与蒙特卡罗方法的性能比较。}\label{fig:predict_comparison}
 \end{figure}
 
-\textbf{预测的相关性}。直观上，如果两个相邻时间段的ON/OFF经验累积分布函数是相似的话，可以用前一时段的统计结果对后一时段的数据进行预测。具体实现中，给定两个时间段$\Delta_i = [t_i, t_{i+1}]$和$\Delta_{i+1} = [t_{i+1}, t_{i+2}]$。在每个时间段内，生成长度为$w$的窗口的预测，统计窗口内中ON/OFF持续时间的值。对窗口内两个时间段的ON序列和OFF序列进行柯尔莫哥洛夫-斯米尔诺夫检验(KS检验)来判断相关性。如果有$n$个窗口，假设有$0.95n$个窗口中KS检验接受了零假设，那么便可以以95\%的置信度认为两个时间段的ON/OFF分布式相似的。
+\textbf{预测的相关性}。在第\ref{sec:model}节中提到Wi-Fi流量具有一定的持续性；直观上，如果两个相邻时间段的ON/OFF经验累积分布函数是相似的话，可以用前一时段的统计结果对后一时段的数据进行预测。具体实现中，给定两个时间段$\Delta_i = [t_i, t_{i+1}]$和$\Delta_{i+1} = [t_{i+1}, t_{i+2}]$。在$\Delta_i$内来利用统计的累积分布函数$F_{ON},F_{OFF}$生成长度为$w$的窗口的模拟流量，用来与$\Delta_{i+1}$随机采样得到的长度同为$w$的实际流量内进行柯尔莫哥洛夫-斯米尔诺夫检验(KS检验)来判断相关性。如果有$n$个窗口，假设有$0.95n$个窗口中KS检验接受了零假设，那么便可以以95\%的置信度认为两个时间段的分布是相似的。
 
-图\ref{fig:kstest}对使用相邻时间段内的统计数据进行预测的可靠程度进行了分析，时间段的划分为10分钟，窗口大小为100毫秒，测试次数为1000个窗口。横轴代表测试的参数，纵轴代表KS检验的通过率，在同一横坐标下的不同点代表了不同的两个相邻时间段的通过率。在商场和家中，OFF状态存在较高的相关度，但ON状态的相关度较低；在实验室环境下，不论是ON状态还是OFF状态都存在很高的相关度，平均通过率在96.7\%和97.1\%。这说明，在中等人数且比较稳定的环境(比如实验室)下，使用该模型预测可以有比较好的效果。
+图\ref{fig:kstest}对使用相邻时间段内的统计数据进行预测的可靠程度进行了分析，时间段的划分为10分钟，窗口大小为100毫秒，测试次数为1000个窗口。横轴代表测试的环境参数，纵轴代表KS检验的通过率，红色与蓝色的点分别表示对ON状态的检验和对OFF状态的检验，在同一横坐标下的不同点代表了不同的两个相邻时间段的通过率。在商场和家庭中，OFF状态存在较高的相关度，但ON状态的相关度较低；在实验室环境下，不论是ON状态还是OFF状态都存在很高的相关度，平均通过率在96.7\%和97.1\%。这说明，在中等人数且比较稳定的环境(比如实验室)下，使用环境中的Wi-Fi数据有很好的相关性；在人数变化或比较少的情况下，相关性会有所下降。
 \begin{figure}[t]
 	\centering
 	\includegraphics[width = \linewidth]{eval_figure1_sliding-cropped}
@@ -90,28 +90,13 @@
 
 \begin{figure}[t]
 	\begin{minipage}[b]{.32\linewidth}
-		\includegraphics[width = \linewidth]{eval_figure4_allTogethrt_256_200_lab-cropped}
-		\subcaption{实验室下，200kbps。}\label{fig:ber_200_lab}
+		\includegraphics[width = \linewidth]{eval_figure4_allTogethrt_256_500_mall-cropped}
+		\subcaption{商场下，500kbps。}\label{fig:ber_500_mall}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[b]{.32\linewidth}
-		\includegraphics[width = \linewidth]{eval_figure4_allTogethrt_256_200_mall-cropped}
-		\subcaption{商场下，200kbps。}\label{fig:ber_200_mall}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{.32\linewidth}
-		\includegraphics[width = \linewidth]{eval_figure4_allTogethrt_256_200_home-cropped}
-		\subcaption{家庭下，200kbps。}\label{fig:ber_200_home}
-	\end{minipage}
-	
 	\begin{minipage}[b]{.32\linewidth}
 		\includegraphics[width = \linewidth]{eval_figure4_allTogethrt_256_500_lab-cropped}
 		\subcaption{实验室下，500kbps。}\label{fig:ber_500_lab}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{.32\linewidth}
-		\includegraphics[width = \linewidth]{eval_figure4_allTogethrt_256_500_mall-cropped}
-		\subcaption{商场下，500kbps。}\label{fig:ber_500_mall}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{.32\linewidth}
@@ -120,13 +105,28 @@
 	\end{minipage}
 	
 	\begin{minipage}[b]{.32\linewidth}
-		\includegraphics[width = \linewidth]{eval_figure4_goodput_256_200_lab-cropped}
-		\subcaption{实验室下，200kbps。}\label{fig:goodput_200_lab}
+		\includegraphics[width = \linewidth]{eval_figure4_allTogethrt_256_200_mall-cropped}
+		\subcaption{商场下，200kbps。}\label{fig:ber_200_mall}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{.32\linewidth}
+		\includegraphics[width = \linewidth]{eval_figure4_RS27_256_500_lab-cropped}
+		\subcaption{图(\subref{fig:ber_500_lab})相同条件，码率升高。}\label{fig:ber_500_lab_cr}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{.32\linewidth}
+		\includegraphics[width = \linewidth]{eval_figure4_RS27_256_200_home-cropped}
+		\subcaption{图(\subref{fig:ber_500_home})相同条件，码率降低。}\label{fig:ber_500_home_cr}
+	\end{minipage}
+	
+	\begin{minipage}[b]{.32\linewidth}
 		\includegraphics[width = \linewidth]{eval_figure4_goodput_256_500_lab-cropped}
 		\subcaption{实验室下，500kbps。}\label{fig:goodput_500_lab}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{.32\linewidth}
+		\includegraphics[width = \linewidth]{eval_figure4_goodput_256_200_mall-cropped}
+		\subcaption{商场下，200kbps。}\label{fig:goodput_200_lab}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{.32\linewidth}

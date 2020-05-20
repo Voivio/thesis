@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.6)  20 MAY 2020 19:35
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.6)  20 MAY 2020 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1308,30 +1308,30 @@ File: figures/eval_figure3_LDPC_256_200_mall-cropped.pdf Graphic file (type pdf
 File: figures/eval_figure3_LDPC_256_500_mall-cropped.pdf Graphic file (type pdf
 )
 <use figures/eval_figure3_LDPC_256_500_mall-cropped.pdf>
-File: figures/eval_figure4_allTogethrt_256_200_lab-cropped.pdf Graphic file (ty
-pe pdf)
-<use figures/eval_figure4_allTogethrt_256_200_lab-cropped.pdf>
-File: figures/eval_figure4_allTogethrt_256_200_mall-cropped.pdf Graphic file (t
-ype pdf)
-<use figures/eval_figure4_allTogethrt_256_200_mall-cropped.pdf>
-File: figures/eval_figure4_allTogethrt_256_200_home-cropped.pdf Graphic file (t
-ype pdf)
-<use figures/eval_figure4_allTogethrt_256_200_home-cropped.pdf>
-File: figures/eval_figure4_allTogethrt_256_500_lab-cropped.pdf Graphic file (ty
-pe pdf)
-<use figures/eval_figure4_allTogethrt_256_500_lab-cropped.pdf>
 File: figures/eval_figure4_allTogethrt_256_500_mall-cropped.pdf Graphic file (t
 ype pdf)
 <use figures/eval_figure4_allTogethrt_256_500_mall-cropped.pdf>
+File: figures/eval_figure4_allTogethrt_256_500_lab-cropped.pdf Graphic file (ty
+pe pdf)
+<use figures/eval_figure4_allTogethrt_256_500_lab-cropped.pdf>
 File: figures/eval_figure4_allTogethrt_256_500_home-cropped.pdf Graphic file (t
 ype pdf)
 <use figures/eval_figure4_allTogethrt_256_500_home-cropped.pdf>
-File: figures/eval_figure4_goodput_256_200_lab-cropped.pdf Graphic file (type p
-df)
-<use figures/eval_figure4_goodput_256_200_lab-cropped.pdf>
+File: figures/eval_figure4_allTogethrt_256_200_mall-cropped.pdf Graphic file (t
+ype pdf)
+<use figures/eval_figure4_allTogethrt_256_200_mall-cropped.pdf>
+File: figures/eval_figure4_RS27_256_500_lab-cropped.pdf Graphic file (type pdf)
+
+<use figures/eval_figure4_RS27_256_500_lab-cropped.pdf>
+File: figures/eval_figure4_RS27_256_200_home-cropped.pdf Graphic file (type pdf
+)
+<use figures/eval_figure4_RS27_256_200_home-cropped.pdf>
 File: figures/eval_figure4_goodput_256_500_lab-cropped.pdf Graphic file (type p
 df)
 <use figures/eval_figure4_goodput_256_500_lab-cropped.pdf>
+File: figures/eval_figure4_goodput_256_200_mall-cropped.pdf Graphic file (type 
+pdf)
+<use figures/eval_figure4_goodput_256_200_mall-cropped.pdf>
 File: figures/eval_figure4_goodput_256_500_mall-cropped.pdf Graphic file (type 
 pdf)
 <use figures/eval_figure4_goodput_256_500_mall-cropped.pdf>
@@ -1382,8 +1382,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
  36322 strings out of 492909
- 724790 string characters out of 6136300
- 881742 words of memory out of 5000000
+ 724750 string characters out of 6136300
+ 882816 words of memory out of 5000000
  39835 multiletter control sequences out of 15000+600000
  539561 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
