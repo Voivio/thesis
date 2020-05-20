@@ -19,14 +19,12 @@
 %  关键词另起一行并隔写在摘要下方，一般3～8个词，中文关键词间空一字或用分号“；”隔
 %  开。英文摘要的关键词与中文摘要的关键词应完全一致，中间用逗号“,”或分号“;”隔开。
   随着物联网技术的发展，利用环境中已有射频信号进行获能和通信的环境反向散射通信技术
-  受到了越来越多的关注。由于Wi-Fi设备的广泛存在，许多工作使用环境中的W-Fi信号进行通信，
-  实现了可靠和高效的通信系统。但绝大多数的工作都对发送数据的节点进行了控制，因此在实际
+  受到了越来越多的关注。由于Wi-Fi设备的广泛存在，许多工作基于环境中的W-Fi信号
+  实现了可靠和高效的反向散射通信系统。但绝大多数的工作都对发送数据的节点进行了控制，因此在面对实际
   环境中面对时有时无的数据流量表现性能会下降；另一方面，不控制节点的工作尽管在一定程度
-  上解决了流量不受控的问题，但
-  没有
-  对信道建模以实现更好的表现。
+  上解决了流量不受控的问题，但没有对信道建模以实现更好的表现。
   
-	本工作提出了一个全新的受马尔科夫链控制的信道模型，基于该模型，本工作利用了蒙特卡罗方法进行了有无状态概率预测，并进一步提升了系统的可靠性和高效性。同时对低密度奇偶校验码和里德-所罗门码两种编码进行了评估和比较。结果表明，该模型在特定环境下最高可实现平均98.6\%的预测击中率，LDPC编码最高将有效吞吐率提升了11kbps，动态码率调节可实现有效吞吐量平均达到最优值的80.79\%。
+	为了在非受控的Wi-Fi信号上实现反向散射通讯，本工作提出了一个全新的受马尔科夫链控制的模型对信道进行建模。基于该模型，本工作利用了蒙特卡罗方法对信道状态进行概率预测，并进一步提升了可靠性和高效性；同时本工作对低密度奇偶校验码和里德-所罗门码两种编码进行了评估和比较。在真实采集的Wi-Fi数据上的仿真评估表明，该模型在特定环境下最高可实现平均98.6\%的预测击中率，LDPC编码最高将有效吞吐率提升了11kbps，结合动态码率调节机制下，有效吞吐量平均能达到最优值的80.79\%。
 \end{abstract}
 
 \begin{enabstract}
@@ -45,5 +43,5 @@ their ubiquity. However, most works exert control over Wi-Fi APs to some extent,
 degradation considering the labile nature of real-life Wi-Fi traffic. Works who not control APs solve such lability can 
 reach better performance with precise channel modelling.
 
-In this work, a new Markov chain modulated channel model is proposed. Based on this model, Wi-Fi traffic can be predicted using Monte Carlo method. LDPC code and RS code are compared under various environments. The evaluation shows the model achieves a best mean hit rate of 98.6\% under lab environment. LDPC code improves the goodput by 11kbps at best and  goodput reaches 80.79\% of optimal value with dynamic code rate.
+To realize backscattering over uncontrolled Wi-Fi traffic, we propose a new Markov chain modulated model for precise channel characterization. Based on this model, Wi-Fi traffic can be predicted using Monte Carlo method. LDPC code and RS code are compared under various environments. The evaluation shows that our model predicts channel state change at a best mean hit rate of 98.6\% under lab environment. LDPC code improves the goodput by 11kbps at best and with dynamic code rate scheme, goodput reaches 80.79\% of optimal value in average.
 \end{enabstract}

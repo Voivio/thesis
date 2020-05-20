@@ -1,9 +1,122 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
   \urlstyle{same}\fi
 \providecommand{\href}[2]{\url{#2}}
 \providecommand{\doi}[1]{\href{https://doi.org/#1}{#1}}
+
+\bibitem[Gershenfeld et~al.(2004)Gershenfeld, Krikorian, and
+  Cohen]{gershenfeld2004internet}
+Gershenfeld~N, Krikorian~R, Cohen~D.
+\newblock The internet of things.
+\newblock \textit{Scientific American}, 2004, 291\penalty0 (4):\penalty0 76-81.
+
+\bibitem[Baker et~al.(2017)Baker, Xiang, and Atkinson]{baker2017internet}
+Baker~S~B, Xiang~W, Atkinson~I.
+\newblock Internet of things for smart healthcare: Technologies, challenges,
+  and opportunities.
+\newblock \textit{IEEE Access}, 2017, 5:\penalty0 26521-26544.
+
+\bibitem[Lee et~al.(2018)Lee, Lv, Ng, Ho, and Choy]{lee2018design}
+Lee~C, Lv~Y, Ng~K, et~al.
+\newblock Design and application of internet of things-based warehouse
+  management system for smart logistics.
+\newblock \textit{International Journal of Production Research}, 2018,
+  56\penalty0 (8):\penalty0 2753-2768.
+
+\bibitem[Liu et~al.(2013)Liu, Parks, Talla, Gollakota, Wetherall, and
+  Smith]{liu2013ambient}
+Liu~V, Parks~A, Talla~V, et~al.
+\newblock Ambient backscatter: Wireless communication out of thin air.
+\newblock \textit{ACM SIGCOMM Computer Communication Review}, 2013, 43\penalty0
+  (4):\penalty0 39-50.
+
+\bibitem[Wang et~al.(2017)Wang, Iyer, Talla, Smith, and Gollakota]{wang2017fm}
+Wang~A, Iyer~V, Talla~V, et~al.
+\newblock $\{$FM$\}$ backscatter: Enabling connected cities and smart
+  fabrics//\allowbreak
+14th $\{$USENIX$\}$ Symposium on Networked Systems Design and Implementation
+  ($\{$NSDI$\}$ 17).
+\newblock 2017: 243-258.
+
+\bibitem[Parks et~al.(2014)Parks and Smith]{parks2014sifting}
+Parks~A~N, Smith~J~R.
+\newblock Sifting through the airwaves: Efficient and scalable multiband rf
+  harvesting//\allowbreak
+2014 IEEE International Conference on RFID (IEEE RFID).
+\newblock IEEE, 2014: 74-81.
+
+\bibitem[Submission(2020)]{OFFB}
+Submission~U.
+\newblock Offb: Off-state tolerant backscattering with roadside wifi aps.
+\newblock \textit{ACM SIGMOBILE Mobile Computing and Communications Review},
+  2020:\penalty0 1-13.
+
+\bibitem[Yamkhin et~al.(2009)Yamkhin and Won]{yamkhin2009modeling}
+Yamkhin~D, Won~Y.
+\newblock Modeling and analysis of wireless lan traffic.
+\newblock \textit{Journal of Information Science \& Engineering}, 2009,
+  25\penalty0 (6).
+
+\bibitem[Stockman(1948)]{stockman1948communication}
+Stockman~H.
+\newblock Communication by means of reflected power.
+\newblock \textit{Proceedings of the IRE}, 1948, 36\penalty0 (10):\penalty0
+  1196-1204.
+
+\bibitem[Bharadia et~al.(2015)Bharadia, Joshi, Kotaru, and
+  Katti]{bharadia2015backfi}
+Bharadia~D, Joshi~K~R, Kotaru~M, et~al.
+\newblock Backfi: High throughput wifi backscatter.
+\newblock \textit{ACM SIGCOMM Computer Communication Review}, 2015, 45\penalty0
+  (4):\penalty0 283-296.
+
+\bibitem[Kellogg et~al.(2014)Kellogg, Parks, Gollakota, Smith, and
+  Wetherall]{kellogg2014wi}
+Kellogg~B, Parks~A, Gollakota~S, et~al.
+\newblock Wi-fi backscatter: Internet connectivity for rf-powered
+  devices//\allowbreak
+Proceedings of the 2014 ACM conference on SIGCOMM.
+\newblock 2014: 607-618.
+
+\bibitem[Kellogg et~al.(2016)Kellogg, Talla, Gollakota, and
+  Smith]{kellogg2016passive}
+Kellogg~B, Talla~V, Gollakota~S, et~al.
+\newblock Passive wi-fi: Bringing low power to wi-fi transmissions//\allowbreak
+13th $\{$USENIX$\}$ Symposium on Networked Systems Design and Implementation
+  ($\{$NSDI$\}$ 16).
+\newblock 2016: 151-164.
+
+\bibitem[Zhang et~al.(2017)Zhang, Josephson, Bharadia, and
+  Katti]{zhang2017freerider}
+Zhang~P, Josephson~C, Bharadia~D, et~al.
+\newblock Freerider: Backscatter communication using commodity
+  radios//\allowbreak
+Proceedings of the 13th International Conference on emerging Networking
+  EXperiments and Technologies.
+\newblock 2017: 389-401.
+
+\bibitem[Huang et~al.(2010)Huang, Xing, Zhou, and Zhou]{huang2010beyond}
+Huang~J, Xing~G, Zhou~G, et~al.
+\newblock Beyond co-existence: Exploiting wifi white space for zigbee
+  performance assurance//\allowbreak
+The 18th IEEE International Conference on Network Protocols.
+\newblock IEEE, 2010: 305-314.
+
+\bibitem[Dhanapala et~al.(2017)Dhanapala, Marfievici, Palipana, Agrawal, and
+  Pesch]{dhanapala2017modeling}
+Dhanapala~I~S~A, Marfievici~R, Palipana~S, et~al.
+\newblock Modeling wifi traffic for white space prediction in wireless sensor
+  networks//\allowbreak
+2017 IEEE 42nd Conference on Local Computer Networks (LCN).
+\newblock IEEE, 2017: 551-554.
+
+\bibitem[Kapetanovic et~al.(2019)Kapetanovic, Saffari, Chandra, and
+  Smith]{kapetanovic2019glaze}
+Kapetanovic~Z, Saffari~A, Chandra~R, et~al.
+\newblock Glaze: Overlaying occupied spectrum with downlink iot transmissions.
+\newblock \textit{Proceedings of the ACM on Interactive, Mobile, Wearable and
+  Ubiquitous Technologies}, 2019, 3\penalty0 (4):\penalty0 1-21.
 
 \end{thebibliography}
