@@ -6,7 +6,7 @@
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}背景介绍}{6}{chapter.2}% 
 \contentsline {section}{\numberline {第一节}环境反向散射通讯}{6}{section.2.1}% 
 \contentsline {section}{\numberline {第二节}里德-所罗门码与突发错误}{7}{section.2.2}% 
-\contentsline {section}{\numberline {第三节}低密度奇偶校验码}{8}{section.2.3}% 
+\contentsline {section}{\numberline {第三节}低密度奇偶校验码}{7}{section.2.3}% 
 \addvspace {12\bp@ }
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}对Wi-Fi流量的建模}{9}{chapter.3}% 
 \contentsline {section}{\numberline {第一节}Wi-Fi流量的有-无状态变化}{9}{section.3.1}% 
