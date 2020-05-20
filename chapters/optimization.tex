@@ -64,19 +64,19 @@ l_i = \inf_l\{F_{ON/OFF}(l) < u_i\},
 
 \subsection{预测对LDPC解码的影响}
 
-LDPC的解码使用信念传播算法(Belief propagation)，也称为信息传递算法(Message-passing)。对于传输的LDPC码字$c = (c_1, c_2, …, c_{L})$，LDPC解码算法的输入是对数似然比(Log-likelihood ratio, LLR)：
+LDPC的解码使用信念传播算法(Belief propagation)，也称为信息传递算法(Message-passing)。对于传输的LDPC码字$x = (x_1, x_2, …, x_{L})$，记对应信道的输出为$y = (y_1, y_2, …, y_{L})$LDPC解码算法的输入是对数似然比(Log-likelihood ratio, LLR)：
 \begin{equation}
 \label{equ:llr}
-L(c_i)=\log\left(\frac{Pr(c_i=0|channel\,output\,for\,c_i)}{Pr(c_i=1|channel\,output\,for \,c_i)}\right)
+L(x_i)=\log\left(\frac{\Pr(x_i=0|y_i)}{\Pr(x_i=1|y_i)}\right)
 \end{equation}
-在算法回一句初始LLR不断更新迭代，更新对每一个比特$c_i$的LLR估计。在算法中，传输信息的比特和负责校验的比特之间会相互交换LLR信息，这也是算法名称的由来。
+在算法回一句初始LLR不断更新迭代，更新对每一个比特$x_i$的LLR估计。在算法中，传输信息的比特和负责校验的比特之间会相互交换LLR信息，这也是算法名称的由来。
 
 值得注意的是，初始LLR的计算是需要对信道的先验的。如果简单的考虑为加性高斯信道，会导致LDPC解码的效果很差；而结合对信道的先验的情况下，式\ref{equ:llr}可以写为：
 \begin{equation}
 \label{equ:llr_new}
-L(c_i)=\log\left(\frac{ p_i \frac{1}{1+ratio_i} + \frac{1}{2} (1-p_i) }{ p_i \frac{1}{1+1/ratio_i} + \frac{1}{2} (1-p_i)  }\right),
+L(c_i)=\log\left(\frac{ p_i \frac{1}{1+\rho_i} + \frac{1}{2} (1-p_i) }{ p_i \frac{1}{1+1/\rho_i} + \frac{1}{2} (1-p_i)  }\right),
 \end{equation}
-其中$ratio_i = Pr\{c_i$信道输出$|c_i=1\}/Pr\{c_i$信道输出$|c_i=0\}$。
+其中$\rho_i = \Pr\{y_i|x_i=1\}/\Pr\{y_i|x_i=0\}$。
 \section{根据预测优化}
 
 \subsection{置换}
@@ -87,7 +87,7 @@ L(c_i)=\log\left(\frac{ p_i \frac{1}{1+ratio_i} + \frac{1}{2} (1-p_i) }{ p_i \fr
 
 寻找一个置换$\sigma^\ast$，使得
 \begin{equation}
-\sigma^\ast = \max_\sigma \Var \{ (z_1, \cdots, z_b) \} 
+\sigma^\ast = \argmax_\sigma \Var \{ (z_1, \cdots, z_b) \} 
 \end{equation}
 其中$z_i, i = 1,\cdots,b$是置换后的帧$sigma(F)$每$i$块中可能出现OFF的个数。由于预测给出的是概率值，因此我们会设置一个阈值，概率小于阈值的会被认定为OFF。图\ref{fig:heatmap_perm}展示了对图\ref{fig:heatmap_256_500_mall}进行置换后的热力图，集中在第二块中的易遇见错误的比特会被均匀分散到两块中，从而提升可靠性。
 
@@ -102,6 +102,6 @@ p_{success} = \frac{\prod_{i = bt+1}^{L} p_i^{'}}{n^\alpha},
 其中$p_i^{'}$是对原有预测升序排列后的概率，$\alpha$时用来平衡长度影响的参数，考虑到越长的预测会出现错误预测的概率越大。在实际的计算中采用2.5。进一步，在给定帧长、传输率和码率的选择范围下，我们求解下式的最优化问题：
 \begin{equation}
 \label{equ:dynamic_parameter}
-fLen^\ast, dr^\ast, cr^\ast = \max_{fLen, dr, cr} \frac{dr}{fLen}\cdot fLen\cdot cr \cdot p_{success},
+L^\ast, r_{data}^\ast, r_{code}^\ast = \argmax_{L, r_{data}, r_{code}} \frac{r_{data}}{L}\cdot L\cdot r_{code} \cdot p_{success},
 \end{equation}
-其中$fLen,dr,cr$依次指帧长、传输率和码率。本质上，式\ref{equ:dynamic_parameter}是在求解单位时间内可以正确传输的比特数。由于$p_{success}$一般会很小，因此采用对数形式的式\ref{equ:dynamic_parameter}。
+其中$L,r_{data},r_{code}$依次指帧长、传输率和码率。本质上，式\ref{equ:dynamic_parameter}是在求解单位时间内可以正确传输的比特数。由于$p_{success}$一般会很小，因此采用对数形式的式\ref{equ:dynamic_parameter}。
