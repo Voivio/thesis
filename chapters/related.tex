@@ -8,17 +8,17 @@
 \textit{FM Backscatter}\cite{wang2017fm}%FM Backscatter
 则实现了使用FM信号的反向散射通信。
 
-但以上方法并不能提供反向散射设备与互联网的连通性，同时能接受响应信号的接收设备并不广泛。因此利用Wi-Fi进行反向散射通信逐渐得到了研究者的兴趣。工作\textit{BackFi}
+但以上方法并不能提供反向散射设备与互联网的连通性，同时能接受相应信号的设备部署并不广泛。因此利用Wi-Fi进行反向散射通信逐渐吸引了研究者的兴趣。工作\textit{BackFi}
 \cite{bharadia2015backfi} %BackFi
-设计了一种可以消除自干扰的机制，实现了在1米范围下5Mbps的高速率；
+设计了一种消除自干扰的机制，实现了在1米范围下5Mbps的高速率；
 \textit{Wi-fi backscatter}\cite{kellogg2014wi}
-通过散射改变当前的CSI/RSSI，从而使得Wi-Fi设备可以解码来自标签的信息；
+通过散射改变信道CSI/RSSI，使Wi-Fi设备可以解码来自标签的信息；
 \textit{Passive Wi-Fi}\cite{kellogg2016passive}%Passive Wi-Fi
 利用反向散射产生可以直接被Wi-Fi设备解码的802.11b数据。更进一步，\textit{FreeRider}\cite{zhang2017freerider}
-将蓝牙，802.11g/n WiFi以及ZigBee等信号拓展为可用的环境信号。但上述工作都对Wi-Fi信号源的传输进行了一定的控制，使用真实环境中的Wi-Fi信号进行反向散射通信在\cite{OFFB}中进行了探讨：Wi-Fi流量空白的阶段被视为突发错误，并利用RS码进行纠正。但在该工作中，没有对环境中Wi-Fi的流量进行进一步研究。本文对利用受马尔科夫链控制的信道模型对单纯使用里德-所罗门码的方案进行了进一步优化。并使得使用表现更好的LDPC码能够应用在反向散射通信中。
+将蓝牙，802.11g/n以及ZigBee等信号拓展为可用的环境信号。但上述工作都对Wi-Fi信号源的传输进行了一定的控制；使用真实环境中的Wi-Fi信号进行反向散射通信在\cite{OFFB}中进行了探讨：Wi-Fi流量空白的阶段被视为突发错误，并利用RS码进行纠正。但在该工作没有对环境中Wi-Fi的流量进一步研究。本文提出的方案同样无需对发送端进行控制，更进一步对利用受马尔科夫链控制的信道模型对单纯使用RS码的方案进行了进一步优化。同时使得表现更好的LDPC码能够应用在反向散射通信中。
 
 \textbf{Wi-Fi流量预测}。
-本文的研究与在无线网络领域中流量预测的研究也有一定的关系。目前多数的研究，对Wi-Fi流量进行预测目的是\emph{避免Wi-Fi的干扰}。跨技术干扰(Cross technology interference)在2.4Ghz频段十分常见；Wi-Fi的广泛存在对许多同频段无线网络的表现产生影响。\textit{WISE}\cite{huang2010beyond}中，为了提升ZigBee的表现，作者建立了一个帕累托模型对Wi-Fi帧间间隔进行模拟，通过计算碰撞概率动态优化参数；工作\cite{dhanapala2017modeling}使用了受二阶马尔可夫模型控制的泊松过程
+本文与无线网络领域中流量预测的研究也有关系。目前多数的研究，对Wi-Fi流量进行预测目的是\emph{避免Wi-Fi的干扰}。跨技术干扰在2.4Ghz频段十分常见；Wi-Fi的广泛存在对许多同频段无线网络的表现产生影响。\textit{WISE}\cite{huang2010beyond}中，为了提升ZigBee的表现，作者建立了一个帕累托模型对Wi-Fi帧间间隔进行模拟，通过计算碰撞概率动态优化参数；工作\cite{dhanapala2017modeling}使用了受二阶马尔可夫模型控制的泊松过程
 %(2nd order Markov Modulated Poisson Process , MMPP(2))
 对Wi-Fi帧间间隔进行预测，从而实现干扰预测。然而，尽管这些工作对帧间间隔进行了模拟，却没有考虑Wi-Fi流量处于ON状态的统计情况，不能很好地应用于反向散射系统。
 

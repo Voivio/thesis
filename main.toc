@@ -16,7 +16,7 @@
 \addvspace {12\bp@ }
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}基于模型的优化}{13}{chapter.4}% 
 \contentsline {section}{\numberline {第一节}流量预测}{13}{section.4.1}% 
-\contentsline {subsection}{\numberline {一}离散时间情况}{13}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {一}离散时间情况下预测}{13}{subsection.4.1.1}% 
 \contentsline {subsection}{\numberline {二}预测对LDPC解码的影响}{14}{subsection.4.1.2}% 
 \contentsline {section}{\numberline {第二节}依据预测优化}{15}{section.4.2}% 
 \contentsline {subsection}{\numberline {一}置换}{15}{subsection.4.2.1}% 
@@ -28,6 +28,6 @@
 \addvspace {12\bp@ }
 \contentsline {chapter}{\numberline {第六章\hspace {.3em}}相关工作}{22}{chapter.6}% 
 \addvspace {12\bp@ }
-\contentsline {chapter}{\numberline {第七章\hspace {.3em}}总结}{24}{chapter.7}% 
-\contentsline {chapter}{参考文献}{25}{chapter*.20}% 
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}总结}{23}{chapter.7}% 
+\contentsline {chapter}{参考文献}{24}{chapter*.20}% 
 \contentsfinish 

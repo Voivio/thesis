@@ -6,7 +6,7 @@
   },
   keywords* = {
     Internet of Things, WiFi Backscatter,
-    Wi-Fi Traffic Modelling, Markov Model, Reed-Solomon Code, Low Density Parity Check Code
+    Wi-Fi Traffic Modeling, Markov Model, Reed-Solomon Code, Low Density Parity Check Code
   },
 }
 
@@ -19,12 +19,12 @@
 %  关键词另起一行并隔写在摘要下方，一般3～8个词，中文关键词间空一字或用分号“；”隔
 %  开。英文摘要的关键词与中文摘要的关键词应完全一致，中间用逗号“,”或分号“;”隔开。
   随着物联网技术的发展，利用环境中已有射频信号进行获能和通信的环境反向散射通信技术
-  受到了越来越多的关注。由于Wi-Fi设备的广泛存在，许多工作基于环境中的W-Fi信号
+  受到了越来越多的关注。由于Wi-Fi设备的广泛存在，许多工作基于环境中的Wi-Fi信号
   实现了可靠和高效的反向散射通信系统。但绝大多数的工作都对发送数据的节点进行了控制，因此在面对实际
-  环境中面对时有时无的数据流量表现性能会下降；另一方面，不控制节点的工作尽管在一定程度
-  上解决了流量不受控的问题，但没有对信道建模以实现更好的表现。
+  环境中时有时无的数据流量表现性能会下降；另一方面，不控制节点的工作尽管在一定程度
+  上解决了流量非受控的问题，但没有对信道建模以实现更好的表现。
   
-	为了在非受控的Wi-Fi信号上实现反向散射通讯，本工作提出了一个全新的受马尔科夫链控制的模型对信道进行建模。基于该模型，本工作利用了蒙特卡罗方法对信道状态进行概率预测，并进一步提升了可靠性和高效性；同时本工作对低密度奇偶校验码和里德-所罗门码两种编码进行了评估和比较。在真实采集的Wi-Fi数据上的仿真评估表明，该模型在特定环境下最高可实现平均98.6\%的预测击中率，LDPC编码最高将有效吞吐率提升了11kbps，结合动态码率调节机制下，有效吞吐量平均能达到最优值的80.79\%。
+	为了在非受控的Wi-Fi信号上实现更可靠和高效的反向散射通信，本工作提出了一个全新的受马尔科夫链控制的模型对信道进行建模。基于该模型，本工作利用了蒙特卡罗方法对信道状态进行概率预测，并基于预测实现了置换和动态参数调节两个优化策略；同时本工作引入了低密度奇偶校验码的新编码策略，与里德-所罗门码进行了评估和比较。在真实采集的Wi-Fi数据上的仿真评估表明，该模型在特定环境下最高可实现平均98.6\%的预测击中率，LDPC编码最高将有效吞吐率提升了11kbps，结合动态码率调节机制下，有效吞吐量平均能达到最优值的80.79\%。
 \end{abstract}
 
 \begin{enabstract}
@@ -36,12 +36,9 @@
 %  This document will show the usage of basic commands provided by \LaTeX{} and
 %  some features provided by the template. For more information, please refer to
 %  the template document ustcthesis.pdf.
-As the development of Internet of Things technology, ambient backscattering is gathering more and
+As the development of Internet of Things technology, ambient backscatter is gathering more and
 more attention due to its ability to harvest energy and communicate over pre-existing RF signals.
-Many backscattering systems have achieved both high reliability and efficiency using Wi-Fi signals due to 
-their ubiquity. However, most works exert control over Wi-Fi APs to some extent, which may lead to performance 
-degradation considering the labile nature of real-life Wi-Fi traffic. Works who not control APs solve such lability can 
-reach better performance with precise channel modelling.
+Many backscatter systems have achieved both high reliability and efficiency using ubiquitous Wi-Fi signals. However, most works exert control over Wi-Fi APs to some extent. Performance is liable to degrade since Wi-Fi traffic in the wild has irregular “on” and “off” states. Works do not control APs solve such unpredictability passively yet fails to fully characterize the channel.
 
-To realize backscattering over uncontrolled Wi-Fi traffic, we propose a new Markov chain modulated model for precise channel characterization. Based on this model, Wi-Fi traffic can be predicted using Monte Carlo method. LDPC code and RS code are compared under various environments. The evaluation shows that our model predicts channel state change at a best mean hit rate of 98.6\% under lab environment. LDPC code improves the goodput by 11kbps at best and with dynamic code rate scheme, goodput reaches 80.79\% of optimal value in average.
+To realize backscatter over uncontrolled Wi-Fi traffic more efficiently and reliably, we propose a new Markov chain modulated model to portray channel precisely. Future Wi-Fi traffic can be predicted using Monte Carlo method based on this model, enabling strategies such as permutation and adaptive parameters selection. LDPC code is newly introduced and compared with RS code under various environments. The evaluation shows that our model predicts channel state change at a best mean hit rate of 98.6\% under lab environment. LDPC code improves the goodput by 11kbps at best and with adaptive code rate selection, goodput reaches 80.79\% of optimal value on average.
 \end{enabstract}
