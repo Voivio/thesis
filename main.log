@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.6)  22 MAY 2020 00:09
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.6.6)  24 MAY 2020 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1195,6 +1195,26 @@ File: figures/ustc-badge.pdf Graphic file (type pdf)
 ]
 (./chapters/intro.tex
 第一章
+LaTeX Font Info:    Calculating math sizes for size <9.03365> on input line 12.
+
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 9.0346pt on input line 12.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 6.32419pt on input line 12.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 4.51729pt on input line 12.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 9.03267pt on input line 12.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 6.32283pt on input line 12.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 4.51633pt on input line 12.
+LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+(Font)              scaled to size 9.55524pt on input line 12.
+LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+(Font)              scaled to size 6.68863pt on input line 12.
+LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+(Font)              scaled to size 4.7776pt on input line 12.
 [4
 
 
@@ -1224,26 +1244,6 @@ File: figures/model_figure1_lab_OFF-cropped.pdf Graphic file (type pdf)
 [9
 
 ] [10] [11]
-LaTeX Font Info:    Calculating math sizes for size <9.03365> on input line 78.
-
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 9.0346pt on input line 78.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 6.32419pt on input line 78.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 4.51729pt on input line 78.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 9.03267pt on input line 78.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 6.32283pt on input line 78.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 4.51633pt on input line 78.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
-(Font)              scaled to size 9.55524pt on input line 78.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
-(Font)              scaled to size 6.68863pt on input line 78.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
-(Font)              scaled to size 4.7776pt on input line 78.
 File: figures/model_figure4_markov-cropped.pdf Graphic file (type pdf)
 <use figures/model_figure4_markov-cropped.pdf>
 File: figures/model_figure4_onOFF-cropped.pdf Graphic file (type pdf)
@@ -1377,10 +1377,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 36351 strings out of 492909
- 724682 string characters out of 6136300
- 884808 words of memory out of 5000000
- 39864 multiletter control sequences out of 15000+600000
+ 36352 strings out of 492909
+ 724694 string characters out of 6136300
+ 885811 words of memory out of 5000000
+ 39865 multiletter control sequences out of 15000+600000
  539561 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,16n,120p,2499b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
